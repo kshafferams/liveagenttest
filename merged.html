@@ -1,94 +1,9 @@
 <html>
     <head>
     	<title>Chat</title>
-		<!-- Live Agent Deployment Code that makes chat available -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	</head>
 	<style type="text/css">
-		/*.offline_bar {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
-			-webkit-font-smoothing: antialiased;
-			background: #00bbff;
-			position: relative;
-			border: none;
-			color: white;
-			transition: .2s;
-			border-radius: 2px;
-			padding: .8em 0;
-			width: 240px;
-		}
-		.logo {
-			width: 6em;
-		}
-		.online_status {
-			content:"";
-			display: inline-block;
-			margin-left: 0.5rem;
-			height: 0.8rem;
-			width: 0.8rem;
-			border-radius: 50%;
-			background: #8bf241
-		}
-		.offline_status {
-			content:"";
-			display: inline-block;
-			margin-left: 1em;
-			height: 0.8em;
-			width: 0.8em;
-			border-radius: 50%;
-			background: #b0b0b0;
-		}
-		.chat_bar {
-			width: 15rem;
-		}
-		.card-margin {
-			margin-right: 0;
-		}
-		.form-group > input {
-			width: 60%;
-		}
-		.button-font {
-			font-size: 1.2rem;
-			font-weight: 500;
-			
-		}
-		.chat_submit_button {
-			margin-top: 2rem;
-		}
-		.name_input:first-child {
-			padding-right: 0.25rem;
-		}
-		.name_input:last-child {
-			padding-left: 0.25rem;
-		}
-		.card_height {
-			height: 27rem;
-		}
-		.greeting_description {
-			line-height: 1.2rem;
-			font-weight: 500;
-		}
-		.line-divider {
-			font-size: 0.8rem;
-			color: gray;
-			text-align: center;
-			padding: 1em 0;
-			margin-top: -1em;
-		}
-		label { 
-			font-size: 0.8rem;
-		}
-		.no-input-valid { 
-			border-color: #dc3545 !important;
-			padding-right: 2.25rem !important;
-			background-repeat: no-repeat !important;
-			background-position: center right calc(2.25rem / 4) !important;
-			background-size: calc(2.25rem / 2) calc(2.25rem / 2) !important;
-			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") !important;
-		}*/
 		.embeddedServiceHelpButton .helpButton .uiButton {
 			background-color: #005290;
 			font-family: "Arial", sans-serif;
@@ -99,29 +14,12 @@
 		
 	</style>
 	<body>
-		
-	<button id="5734D00000000Hc" type="button" class="btn btn-primary char_bar">Chat Now!</button>
 
 	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.js'></script>
 	<script type='text/javascript'>
 		var initESW = function(gslbBaseURL) {
 			embedded_svc.settings.displayHelpButton = true; //Or false
 			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
-			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-			//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-			//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-			// Settings for Chat
-			//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-				// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-				// Returns a valid button ID.
-			//};
-			//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
 			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 			embedded_svc.settings.entryFeature = 'LiveAgent';
