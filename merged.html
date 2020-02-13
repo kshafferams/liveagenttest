@@ -99,116 +99,60 @@
 		
 	</style>
 	<body>
-		<div id="chat_collapsed_button">Chat Online<span id="online_status" /></div>
-		<div id="liveagent_button_offline_5731S000000fxSp">Chat Offline<span class="offline_status" /></div>
-		<div id="liveagent_button_online_5731S000000fxSp">
-			<div>
-				<h5 class="card-header bg-primary text-white">Online Chat Support</h5>
-			</div>
-			<div id="prechatForm">
-				<form class="needs-validation" novalidate>
-					<div class="form-group d-flex ">
-						<div class="col-sm-6 name_input">
-							<label>First Name *</label>
-							<input type="text" class="form-control form-control-sm" id="firstName" name="liveagent.prechat:contactFirstName" required />
-						</div>
-						<div class="col-sm-6 name_input" >
-							<label>Last Name *</label>
-							<input type="text" class="form-control form-control-sm" id="lastName" name="liveagent.prechat:contactLastName" required />
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-12 col-xs-offset-3">
-							<label>Email</label>
-							<input type="email" id="email-input" class="form-control form-control-sm" name="liveagent.prechat:contactEmail" placeholder="example@example.com" />
-						</div>
-					</div>
-					<div class="line-divider">OR</div>
-					<div class="form-group">
-						<div class="col-sm-12 col-xs-offset-3">
-							<label>Phone Number</label>
-							<input type="text" id="phone-input" class="form-control form-control-sm" name="liveagent.prechat:contactEmail" placeholder="ex.123456789" pattern="\d*" maxlength="10" />
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-12 col-xs-offset-3">
-							<label>Subject *</label>
-							<input type="text" class="form-control form-control-sm" name="liveagent.prechat:subject" maxlength="100" required />
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-12 col-sm-offset-3 text-center chat_submit_button">
-							<button class="btn btn-primary">Start Chat</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div id="greeting_form">
-				<div class="col-sm-12 text-center">
-					<img class="logo" style="border-radius:50%;"src="http://intranet/amshome/images/employees/UserImage.aspx?UserID=AMS\psackschewsky" />
-				</div>
-				<div class="col-sm-12 text-center mt-2">
-					<p class="card-title font-weight-bold text-uppercase">Need Any Assistance?</p>
-				</div>
-				<div class="col-sm-12 text-center">
-					<p class="card-text greeting_description">Chat live with an online representative</p>
-				</div>
-				<div class="col-sm-12 text-center mt-2">
-					<button id="5734D00000000Hc" type="button" class="btn btn-primary char_bar">Chat Now!</button>
-				</div>
-			</div>
-		</div>
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.js'></script>
-<script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		
+	<button id="5734D00000000Hc" type="button" class="btn btn-primary char_bar">Chat Now!</button>
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.js'></script>
+	<script type='text/javascript'>
+		var initESW = function(gslbBaseURL) {
+			embedded_svc.settings.displayHelpButton = true; //Or false
+			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+			//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+			//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
-		// Settings for Chat
-		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+			//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
+			// Settings for Chat
+			//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+				// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+				// Returns a valid button ID.
+			//};
+			//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-		embedded_svc.init(
-			'https://alcoholmonitoring--scrambox.my.salesforce.com',
-			'https://scrambox-myscram.cs71.force.com/SCRAMSystemsCustomerCommunity',
-			gslbBaseURL,
-			'00D4D0000000uGp',
-			'AMS_Chat',
-			{
-				baseLiveAgentContentURL: 'https://c.la3-c1cs-phx.salesforceliveagent.com/content',
-				deploymentId: '5724D00000000Cl',
-				buttonId: '5734D00000000Hc',
-				baseLiveAgentURL: 'https://d.la3-c1cs-phx.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'AMS_Chat',
-				isOfflineSupportEnabled: true
-			}
-		);
-	};
+			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+			embedded_svc.settings.entryFeature = 'LiveAgent';
 
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://alcoholmonitoring--scrambox.my.salesforce.com/embeddedservice/5.0/esw.js');
-		s.onload = function() {
-			initESW(null);
+			embedded_svc.init(
+				'https://alcoholmonitoring--scrambox.my.salesforce.com',
+				'https://scrambox-myscram.cs71.force.com/SCRAMSystemsCustomerCommunity',
+				gslbBaseURL,
+				'00D4D0000000uGp',
+				'AMS_Chat',
+				{
+					baseLiveAgentContentURL: 'https://c.la3-c1cs-phx.salesforceliveagent.com/content',
+					deploymentId: '5724D00000000Cl',
+					buttonId: '5734D00000000Hc',
+					baseLiveAgentURL: 'https://d.la3-c1cs-phx.salesforceliveagent.com/chat',
+					eswLiveAgentDevName: 'AMS_Chat',
+					isOfflineSupportEnabled: true
+				}
+			);
 		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
-	</script>
+
+		if (!window.embedded_svc) {
+			var s = document.createElement('script');
+			s.setAttribute('src', 'https://alcoholmonitoring--scrambox.my.salesforce.com/embeddedservice/5.0/esw.js');
+			s.onload = function() {
+				initESW(null);
+			};
+			document.body.appendChild(s);
+		} else {
+			initESW('https://service.force.com');
+		}
+		</script>
     </body>
 </html>
