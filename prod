@@ -1,0 +1,45 @@
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.init(
+			'https://alcoholmonitoring.my.salesforce.com',
+			'https://myscram.force.com/scramsystemscustomercommunity3',
+			gslbBaseURL,
+			'00D00000000hiN2',
+			'AMS_CS_Chat_Team',
+			{
+				baseLiveAgentContentURL: 'https://c.la1-c2-ph2.salesforceliveagent.com/content',
+				deploymentId: '5721S0000004G1j',
+				buttonId: '5731S0000004GG1',
+				baseLiveAgentURL: 'https://d.la1-c2-ph2.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'AMS_CS_Chat_Team',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://alcoholmonitoring.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
